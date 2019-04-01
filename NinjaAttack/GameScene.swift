@@ -71,7 +71,7 @@ extension CGPoint {
 
 class GameScene: SKScene {
   // 1
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = SKSpriteNode(imageNamed: "todd")
   var monstersDestroyed = 0
 
   
@@ -157,7 +157,7 @@ class GameScene: SKScene {
     let touchLocation = touch.location(in: self)
     
     // 2 - Set up initial location of projectile
-    let projectile = SKSpriteNode(imageNamed: "projectile")
+    let projectile = SKSpriteNode(imageNamed: "skyrim")
     projectile.position = player.position
     
     projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
