@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
 		7E19D2CD224E55DA00953D4A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19D2CC224E55DA00953D4A /* GameOverScene.swift */; };
+		7E41DE642252CB8100BB2CA8 /* dova.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E41DE632252CB8100BB2CA8 /* dova.mp3 */; };
+		7E41DE662252CCC400BB2CA8 /* ItJustWorks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E41DE652252CCC300BB2CA8 /* ItJustWorks.mp3 */; };
+		7E41DE682252DAFD00BB2CA8 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7E41DE672252DAFD00BB2CA8 /* intro.mp4 */; };
 		AFD63F872036493600E08C66 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F862036493600E08C66 /* GameViewController.swift */; };
 		AFD63F892036497100E08C66 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F882036497100E08C66 /* GameScene.swift */; };
 		AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8D203649F800E08C66 /* background-music-aac.caf */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E19D2CC224E55DA00953D4A /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		7E41DE632252CB8100BB2CA8 /* dova.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dova.mp3; sourceTree = "<group>"; };
+		7E41DE652252CCC300BB2CA8 /* ItJustWorks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItJustWorks.mp3; sourceTree = "<group>"; };
+		7E41DE672252DAFD00BB2CA8 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
 		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = NinjaAttack/GameViewController.swift; sourceTree = "<group>"; };
 		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = NinjaAttack/GameScene.swift; sourceTree = "<group>"; };
 		AFD63F8D203649F800E08C66 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 		AFD63F8C203649F800E08C66 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7E41DE652252CCC300BB2CA8 /* ItJustWorks.mp3 */,
+				7E41DE632252CB8100BB2CA8 /* dova.mp3 */,
 				AFD63F8D203649F800E08C66 /* background-music-aac.caf */,
 				AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */,
 			);
@@ -56,6 +64,7 @@
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
+				7E41DE672252DAFD00BB2CA8 /* intro.mp4 */,
 				D2A5F2021F4A9144005CD714 /* NinjaAttack */,
 				D2A5F2011F4A9144005CD714 /* Products */,
 			);
@@ -148,11 +157,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E41DE682252DAFD00BB2CA8 /* intro.mp4 in Resources */,
 				AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
+				7E41DE642252CB8100BB2CA8 /* dova.mp3 in Resources */,
 				5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */,
 				AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */,
 				D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */,
+				7E41DE662252CCC400BB2CA8 /* ItJustWorks.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

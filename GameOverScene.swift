@@ -32,23 +32,27 @@ class GameOverScene: SKScene {
   init(size: CGSize, won:Bool) {
     super.init(size: size)
     
-    // 1
-    backgroundColor = SKColor.white
-    
     // 2
-    let message = won ? "You Won!" : "You Lose :["
+//    let message = won ? "You Won!" : "You Lose :["
+    
+    let sample = SKVideoNode(fileNamed: "intro.mp4")
+    sample.position = CGPoint(x: frame.midX,
+                              y: frame.midY)
+    sample.size = scene!.size
+    addChild(sample)
+    sample.play()
     
     // 3
-    let label = SKLabelNode(fontNamed: "Chalkduster")
-    label.text = message
-    label.fontSize = 40
-    label.fontColor = SKColor.black
-    label.position = CGPoint(x: size.width/2, y: size.height/2)
-    addChild(label)
+//    let label = SKLabelNode(fontNamed: "Chalkduster")
+//    label.text = message
+//    label.fontSize = 40
+//    label.fontColor = SKColor.black
+//    label.position = CGPoint(x: size.width/2, y: size.height/2)
+//    addChild(label)
     
-    // 4
+    //4
     run(SKAction.sequence([
-      SKAction.wait(forDuration: 3.0),
+      SKAction.wait(forDuration: 30.0),
       SKAction.run() { [weak self] in
         // 5
         guard let `self` = self else { return }

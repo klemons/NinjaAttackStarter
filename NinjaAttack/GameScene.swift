@@ -28,6 +28,7 @@
 
 import SpriteKit
 
+
 struct PhysicsCategory {
   static let none      : UInt32 = 0
   static let all       : UInt32 = UInt32.max
@@ -73,6 +74,7 @@ class GameScene: SKScene {
   // 1
   let player = SKSpriteNode(imageNamed: "todd")
   var monstersDestroyed = 0
+  var scoreLabel: SKLabelNode!
 
   
   override func didMove(to view: SKView) {
@@ -82,6 +84,12 @@ class GameScene: SKScene {
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
     // 4
     addChild(player)
+    scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+    scoreLabel.fontColor = SKColor.black
+    scoreLabel.text = "Score: 0"
+    scoreLabel.horizontalAlignmentMode = .left
+    scoreLabel.position = CGPoint(x: size.width * 0.2, y: size.height * 0.8)
+    addChild(scoreLabel)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self as! SKPhysicsContactDelegate
@@ -90,13 +98,13 @@ class GameScene: SKScene {
     run(SKAction.repeatForever(
       SKAction.sequence([
         SKAction.run(addMonster),
-        SKAction.wait(forDuration: 2.0),
+        SKAction.wait(forDuration: 4.0),
         SKAction.run(addBigMonster),
-        SKAction.wait(forDuration: 2.0)
+        SKAction.wait(forDuration: 4.0)
         ])
     ))
 
-    let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+    let backgroundMusic = SKAudioNode(fileNamed: "dova.mp3")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
 
@@ -193,7 +201,7 @@ class GameScene: SKScene {
     guard let touch = touches.first else {
       return
     }
-    run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+    run(SKAction.playSoundFileNamed("ItJustWorks.mp3", waitForCompletion: false))
 
     let touchLocation = touch.location(in: self)
     
@@ -239,7 +247,8 @@ class GameScene: SKScene {
     projectile.removeFromParent()
     monster.removeFromParent()
     monstersDestroyed += 1
-    if monstersDestroyed > 30 {
+    scoreLabel?.text = "Score: \(monstersDestroyed)"
+    if monstersDestroyed > 20 {
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
       let gameOverScene = GameOverScene(size: self.size, won: true)
       view?.presentScene(gameOverScene, transition: reveal)
