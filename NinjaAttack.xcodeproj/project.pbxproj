@@ -64,7 +64,6 @@
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
-				7E41DE672252DAFD00BB2CA8 /* intro.mp4 */,
 				D2A5F2021F4A9144005CD714 /* NinjaAttack */,
 				D2A5F2011F4A9144005CD714 /* Products */,
 			);
@@ -84,6 +83,7 @@
 		D2A5F2021F4A9144005CD714 /* NinjaAttack */ = {
 			isa = PBXGroup;
 			children = (
+				7E41DE672252DAFD00BB2CA8 /* intro.mp4 */,
 				AFD63F8C203649F800E08C66 /* Sounds */,
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
 				D2A5F2071F4A9144005CD714 /* Main.storyboard */,
