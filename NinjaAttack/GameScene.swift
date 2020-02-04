@@ -75,7 +75,6 @@ class GameScene: SKScene {
   let player = SKSpriteNode(imageNamed: "todd")
   var monstersDestroyed = 0
   var scoreLabel: SKLabelNode!
-
   
   override func didMove(to view: SKView) {
     // 2
@@ -123,6 +122,8 @@ class GameScene: SKScene {
     // Create sprite
     let monster = SKSpriteNode(imageNamed: "reddit")
     
+    monster.setScale(2.0)
+    
     monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
     monster.physicsBody?.isDynamic = true // 2
     monster.physicsBody?.categoryBitMask = PhysicsCategory.monster // 3
@@ -161,6 +162,8 @@ class GameScene: SKScene {
     
     // Create sprite
     let monster = SKSpriteNode(imageNamed: "obsidian")
+    
+    monster.setScale(2.0)
     
     monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
     monster.physicsBody?.isDynamic = true // 2
@@ -207,6 +210,7 @@ class GameScene: SKScene {
     
     // 2 - Set up initial location of projectile
     let projectile = SKSpriteNode(imageNamed: "skyrim")
+    projectile.setScale(2.0)
     projectile.position = player.position
     
     projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
