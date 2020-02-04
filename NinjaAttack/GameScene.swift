@@ -104,7 +104,7 @@ class GameScene: SKScene {
         ])
     ))
 
-    let backgroundMusic = SKAudioNode(fileNamed: "dova.mp3")
+    let backgroundMusic = SKAudioNode(fileNamed: "gss.mp3")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
 
