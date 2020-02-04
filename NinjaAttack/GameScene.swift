@@ -81,6 +81,7 @@ class GameScene: SKScene {
     backgroundColor = SKColor.white
     // 3
     player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+    player.setScale(2.0)
     // 4
     addChild(player)
     scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
